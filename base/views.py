@@ -65,9 +65,9 @@ def title_base(request):
             print(f"Telegram API Response: Status - {response_status}, Text - {response_text}")
         except Exception as e:
             print(f"Error: {e}")
-        
-    return redirect('success_page')
+        return redirect('success_page')
 
+    return render(request, 'base/title_base.html', {'form': form})
 
 def about(request):
     return render(request,"base/about-us.html")
